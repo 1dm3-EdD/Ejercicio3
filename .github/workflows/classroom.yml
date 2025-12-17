@@ -1,0 +1,20 @@
+name: Autograding - Ejercicio 3
+on: [push]
+
+jobs:
+  grade:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Descargar el código del alumno con TODO el historial
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+
+      # 2. Dar permisos de ejecución al script
+      - name: Preparar script de evaluación
+        run: chmod +x ./.github/scripts/evaluar.sh
+
+      # 3. Ejecutar la evaluación
+      - name: Ejecutar corrección
+        run: ./.github/scripts/evaluar.sh
+        shell: bash
