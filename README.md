@@ -1,1 +1,1 @@
-Seguid los pasos del fichero Entrega ejercicio.md
+Seguid los pasos del fichero Entregar ejercicio.md
